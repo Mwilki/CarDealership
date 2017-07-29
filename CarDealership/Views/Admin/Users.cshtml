@@ -1,0 +1,41 @@
+﻿@model CarDealership.Models.UserListVM
+
+@{
+    ViewBag.Title = "Users";
+}
+
+<h2>Users</h2>
+@Html.ActionLink("Admin Panel", "Index", "Admin")<br />
+<a href="~/admin/adduser">Add User</a> <br />
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <td>UserName</td>
+            <td>Roles</td>
+            <td></td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in Model.Users)
+        {
+            <tr>
+                <td>@user.UserName</td>
+                <td>
+                    @foreach (var role in Model.Roles)
+                {
+                    foreach (var item in user.Roles)
+                    {
+                        if (item.RoleId == role.Id)
+
+                        {
+                            <p>@role.Name</p>
+                        }
+                    }
+                }
+            </td>
+            <td><a href="~/admin/EditUser/@user.Id">Edit </a><a href="~/admin/DeleteUser/@user.Id">Delete</a></td>
+        </tr>
+        }
+    </tbody>
+</table>

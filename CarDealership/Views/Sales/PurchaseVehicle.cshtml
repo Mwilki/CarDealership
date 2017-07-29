@@ -1,0 +1,80 @@
+﻿@model CarDealership.Models.SalesVehicleViewModel
+
+@{
+    ViewBag.Title = "PurchaseVehicle";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>PurchaseVehicle</h2>
+<br />
+@{
+    Html.RenderPartial("_SalesDetailsBox", Model.Vehicle);
+}
+<br />
+<br />
+<h2>Sales Information</h2>
+
+@using (Html.BeginForm("PurchaseVehicle", "Sales", FormMethod.Post))
+{
+    @Html.HiddenFor(e => Model.Vehicle.Id)
+    <div class="form-group">
+        <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-3">
+                    @Html.LabelFor(Model => Model.Sale.Name)
+                    @Html.TextBoxFor(Model => Model.Sale.Name, new { @class = "form-control", placeholder = "Name" })
+                </div>
+                <div class="col-md-3">
+                    @Html.LabelFor(Model => Model.Sale.Phone)
+                    @Html.TextBoxFor(Model => Model.Sale.Phone, new { @class = "form-control", type = "tel", placeholder = "(555)123-4567"})
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    @Html.LabelFor(Model => Model.Sale.Email)
+                    @Html.TextBoxFor(Model => Model.Sale.Email, new { @class = "form-control", type = "email", placeholder = "Example@email.com" })
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    @Html.LabelFor(Model => Model.Sale.Street1)
+                    @Html.TextBoxFor(Model => Model.Sale.Street1, new { @class = "form-control", placeholder = "123 Example Way" })
+                </div>
+                <div class="col-md-3">
+                    @Html.LabelFor(Model => Model.Sale.Street2)
+                    @Html.TextBoxFor(Model => Model.Sale.Street2, new { @class = "form-control", placeholder = " " })
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    @Html.LabelFor(Model => Model.Sale.City)
+                    @Html.TextBoxFor(Model => Model.Sale.City, new { @class = "form-control", placeholder = " " })
+                </div>
+                <div class="col-md-3">
+                    @Html.LabelFor(Model => Model.Sale.State)
+                    @Html.DropDownListFor(Model => Model.Sale.State, Model.States.StateSelectList, new { @class = "form-control" })
+                </div>
+            </div>
+            <hr />
+            <div class="row">
+                <div class="col-md-3">
+                    @Html.LabelFor(Model => Model.Sale.PurchasePrice)
+                    @Html.TextBoxFor(Model => Model.Sale.PurchasePrice, new { @class = "form-control", placeholder=" "})
+                </div>
+                <div class="col-md-3">
+                    @Html.LabelFor(Model => Model.Sale.PurchaseType)
+                    @Html.DropDownListFor(Model => Model.Sale.PurchaseType, Model.PurchaseTypes.PurchaseTypeSelectList, new {@class="form-control"})
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <br />
+                    <input type="submit" value="Submit Sale" class="form-control">
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+
+

@@ -1,0 +1,21 @@
+﻿@model List<CarDealership.Models.Vehicle>
+@{
+    ViewBag.Title = "UsedSearch";
+}
+
+<h3>Search Results</h3>
+<!-- Hidden div that recieves search results -->
+<div id="searchDiv" class="hidden"></div>
+<div id="contentTiles">
+    @if (Model != null)
+    {
+        foreach (var vehicle in Model)
+        {
+            {
+                Html.RenderPartial("_UsedSearchResult", vehicle);
+            }
+        }
+    }
+</div>
+
+

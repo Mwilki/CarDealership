@@ -1,0 +1,37 @@
+﻿@model CarDealership.Models.AdminSpecialsViewModel
+@{
+    ViewBag.Title = "Specials";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container">
+    <h2>Specials</h2>
+    @*@Html.RenderPartial("_AdminNewSpecialBox")*@
+    <div class="col-md-12">
+        <div class="form-group specialBox" id="addSpecialForm">
+            <div class="col-md-8 col-md-offset-1">
+                <br />
+                @using (Html.BeginForm("CreateSpecial", "Admin", FormMethod.Post))
+                {
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.NewSpecial.Title)
+                        @Html.TextBoxFor(m => m.NewSpecial.Title, new { @class = "form-control" })
+                        <br />
+                        @Html.LabelFor(m => m.NewSpecial.Details)
+                        @Html.TextAreaFor(m => m.NewSpecial.Details, new { @class = "form-control", @style = "height:100px;" })
+                        <br />
+                        <input type="submit" class="btn btn-default form-control" value="Create" />
+                    </div>
+
+                }
+            </div>
+        </div>
+    </div>
+    <br />
+    <br />
+    <h2>Current Specials</h2>
+    <br />
+    @foreach (var special in Model.CurrentSpecials)
+    {
+        Html.RenderPartial("_AdminSpecialBox", special);
+    }
+</div>

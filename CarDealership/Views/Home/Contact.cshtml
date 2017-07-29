@@ -1,0 +1,43 @@
+﻿@model CarDealership.Models.Contact
+
+@{
+    ViewBag.Title = "Contact Us";
+}
+<link href="~/Content/index.css" rel="stylesheet" />
+<div class="container">
+    <div class="col-md-3">
+        <div class="col-md-12">
+            <h2>@ViewBag.Title.</h2>
+            @using (Html.BeginForm("AddContact", "Home", FormMethod.Post))
+            {
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Name)
+                    @Html.TextBoxFor(m => m.Name, new { @class = "form-control", placeholder = "Name" })
+                    @Html.LabelFor(m=>m.Email)
+                    @Html.TextBoxFor(m=>m.Email, new { @class = "form-control", placeholder = "Email" })
+                    @Html.LabelFor(m=>m.Phone)
+                    @Html.TextBoxFor(m=>m.Phone, new { @class = "form-control", placeholder = ""})
+                    @Html.LabelFor(m=>m.Message)
+                    @Html.TextAreaFor(m=>m.Message, new { @class = "form-control" })
+                    <button type="submit" class="btn" style="background-color:black; color:white;">Submit</button>
+                </div>
+            }
+
+
+        </div>
+    </div>
+    <div class="col-md-9">
+        <div class="col-md-12 text-center">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1567.9386684879041!2d-85.80958909614503!3d38.1895232986155!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x886913ad60bffe53%3A0xffe133d56926ee0b!2s4041+Dixie+Hwy%2C+Louisville%2C+KY+40216!5e0!3m2!1sen!2sus!4v1490879322571" width="600" height="450" frameborder="0" style="padding:10px; border:0 solid;" allowfullscreen></iframe>
+            
+            <address>
+                4041 Dixie Hwy<br />
+                Louisville, KY 40216<br />
+                Sales:
+                425.555.0100 <br />
+                Service:
+                425.555.0101                
+            </address>
+        </div>
+    </div>
+</div>

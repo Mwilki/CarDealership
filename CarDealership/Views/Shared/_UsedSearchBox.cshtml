@@ -1,0 +1,45 @@
+﻿@model CarDealership.Models.NewVM
+<div class="form-group " style="border: 2px solid black;">
+    <label for="QuickSearch">Quick Search</label>
+    @using (Html.BeginForm("UsedSearch", "Inventory", FormMethod.Post))
+    {<div class="text-center">
+        <input type="text" id="QuickSearch" name="Search" placeholder="Enter make, model, year" />
+        <label for="PriceLow" style="padding-left:25px">Price</label>
+        <select id="PriceLow" name="PriceLow">
+            <option value="0">No Min</option>
+            <option value="10000">$10,000</option>
+            <option value="15000">$15,000</option>
+            <option value="20000">$20,000</option>
+            <option value="25000">$25,000</option>
+            <option value="30000">$30,000</option>
+        </select>
+        <select id="PriceHigh" name="PriceHigh">
+            <option value="@int.MaxValue">No Max</option>
+            <option value="15000">$15,000</option>
+            <option value="20000">$20,000</option>
+            <option value="25000">$25,000</option>
+            <option value="30000">$30,000</option>
+            <option value="35000">$35,000</option>
+            <option value="40000">$40,000</option>
+        </select>
+        <label for="YearLow" style="padding-left:25px">Year</label>
+        <select id="YearLow" name="YearLow">
+            <option value="1900">No Min</option>
+            <option value="2014">2014</option>
+            <option value="2015">2015</option>
+            <option value="2016">2016</option>
+            <option value="2017">2017</option>
+        </select>
+        <select id="YearHigh" name="YearHigh">
+            <option value="3000">No Max</option>
+            <option value="2014">2014</option>
+            <option value="2015">2015</option>
+            <option value="2016">2016</option>
+            <option value="2017">2017</option>
+        </select>
+    </div>
+        <div class="btn-lg text-center">
+            <button id="SearchNew" class="btn btn-default">Search</button>
+        </div>
+    }
+</div>

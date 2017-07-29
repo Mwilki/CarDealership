@@ -1,0 +1,26 @@
+﻿@model CarDealership.Models.Special
+
+<div class="col-md-12 specialBox">
+    <div class="col-md-3 text-center" id="ImageDiv">
+        <span class="glyphicon glyphicon-usd glyphicon-align-center glyphicon-resize-full" style="font-size:6em; padding-top:20%;"></span>
+    </div>
+    <div class="col-md-9" style="text-align:center; padding-top:2%">
+        <div class="row">
+            <div>
+                <h3 class="pull-left" style="padding-right:2%">@Model.Title</h3>
+            </div>
+            <div class="pull-right">
+                <a class="btn btn-danger btn-block" role="button" href="~/Inventory/Details/@Model.Id">Delete</a>
+            </div>
+        </div>
+        <div class="row">
+            <div>
+                <p class="pull-left" id="specialDetails" style="padding-right:2%">
+                    @Model.Details
+                </p>
+            </div>
+        </div>
+    </div>
+    <br />
+</div>
+

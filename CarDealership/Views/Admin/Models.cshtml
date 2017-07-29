@@ -1,0 +1,38 @@
+﻿@model CarDealership.Models.AdminAddModelViewModel
+
+@{
+    ViewBag.Title = "Makes";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container">
+    <h2>Models</h2>
+
+    <div class="box">
+        @using (Html.BeginForm("AddModel", "Admin", FormMethod.Post))
+        {
+            <span>
+                @Html.LabelFor(m => m.NewModel.ModelName, new { @style = "padding-left:2%;padding-right:2%" })
+                @Html.TextBoxFor(m => m.NewModel.ModelName, new { @style = "padding-right:2%" })
+                <input type="submit" style="margin-left:2%" value="Save" />
+            </span>
+        }
+    </div>
+    <br />
+
+    <table class="table table-bordered table-striped">
+        <tr>
+            <th>
+                All Makes
+            </th>
+        </tr>
+
+        @foreach (var item in Model.AllModels)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ModelName) <a class="btn btn-danger btn-block" role="button" href="~/admin/deletemodel/@item.ModelId">Delete</a>
+                </td>
+            </tr>
+        }
+    </table>
+</div>

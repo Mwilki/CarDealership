@@ -1,0 +1,27 @@
+﻿@model List<CarDealership.Models.Statistic>
+@{
+    ViewBag.Title = "Sales";
+}
+
+<h2>Reports Sales</h2>
+
+<div class="container">
+    <h2>Sales Report</h2>
+
+    <table class="table table-bordered">
+        <tr>
+            <th>
+                All Makes
+            </th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ModelName) <a class="btn btn-danger btn-block" role="button" href="~/admin/deletemodel/@item.ModelId">Delete</a>
+                </td>
+            </tr>
+        }
+    </table>
+</div>

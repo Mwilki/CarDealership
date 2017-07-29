@@ -1,0 +1,20 @@
+﻿@model CarDealership.Models.Special
+
+<div class="col-md-12 specialBox">
+    <div class="col-md-3 text-center" id="ImageDiv">
+        <span class="glyphicon glyphicon-usd glyphicon-align-center glyphicon-resize-full" style="font-size:6em; padding-top:20%;"></span>
+    </div>
+    <div class="col-md-9" style="text-align:center; padding-top:2%">
+        <div>
+            <h3 class="pull-left" style="padding-right:2%">@Model.Title</h3>
+        </div>
+        <br />
+        <br />
+        <div>
+            <p class="pull-left" id="specialDetails" style="padding-right:2%">
+                @Model.Details
+            </p>
+        </div>
+        <br />
+    </div>
+</div>

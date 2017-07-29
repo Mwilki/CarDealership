@@ -1,0 +1,13 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container">
+    <h2>Reports</h2>
+    <br />
+    @Html.ActionLink("Inventory Report","InventoryReport")
+    <br />
+    <br />
+    @Html.ActionLink("Sales Report", "SalesReport")
+</div>

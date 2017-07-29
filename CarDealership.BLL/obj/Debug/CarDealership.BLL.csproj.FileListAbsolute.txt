@@ -1,0 +1,16 @@
+C:\Users\praisekek\OneDrive\Employment\Important\process-payments\CarDealership\CarDealership.BLL\bin\Debug\CarDealership.BLL.dll
+C:\Users\praisekek\OneDrive\Employment\Important\process-payments\CarDealership\CarDealership.BLL\bin\Debug\CarDealership.BLL.pdb
+C:\Users\praisekek\OneDrive\Employment\Important\process-payments\CarDealership\CarDealership.BLL\bin\Debug\CarDealership.Data.dll
+C:\Users\praisekek\OneDrive\Employment\Important\process-payments\CarDealership\CarDealership.BLL\bin\Debug\CarDealership.Models.dll
+C:\Users\praisekek\OneDrive\Employment\Important\process-payments\CarDealership\CarDealership.BLL\bin\Debug\CarDealership.Data.pdb
+C:\Users\praisekek\OneDrive\Employment\Important\process-payments\CarDealership\CarDealership.BLL\bin\Debug\CarDealership.Models.pdb
+C:\Users\praisekek\OneDrive\Employment\Important\process-payments\CarDealership\CarDealership.BLL\obj\Debug\CarDealership.BLL.csprojResolveAssemblyReference.cache
+C:\Users\praisekek\OneDrive\Employment\Important\process-payments\CarDealership\CarDealership.BLL\obj\Debug\CarDealership.BLL.dll
+C:\Users\praisekek\OneDrive\Employment\Important\process-payments\CarDealership\CarDealership.BLL\obj\Debug\CarDealership.BLL.pdb
+C:\Users\praisekek\OneDrive\Employment\Important\process-payments\CarDealership\CarDealership.BLL\bin\Debug\CarDealership.BLL.dll.config
+C:\Users\praisekek\OneDrive\Employment\Important\process-payments\CarDealership\CarDealership.BLL\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\praisekek\OneDrive\Employment\Important\process-payments\CarDealership\CarDealership.BLL\bin\Debug\EntityFramework.dll
+C:\Users\praisekek\OneDrive\Employment\Important\process-payments\CarDealership\CarDealership.BLL\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\praisekek\OneDrive\Employment\Important\process-payments\CarDealership\CarDealership.BLL\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\praisekek\OneDrive\Employment\Important\process-payments\CarDealership\CarDealership.BLL\bin\Debug\EntityFramework.xml
+C:\Users\praisekek\OneDrive\Employment\Important\process-payments\CarDealership\CarDealership.BLL\bin\Debug\Microsoft.AspNet.Identity.Core.xml

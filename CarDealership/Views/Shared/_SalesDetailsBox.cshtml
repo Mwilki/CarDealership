@@ -1,0 +1,62 @@
+﻿@model CarDealership.Models.Vehicle
+<div class="col-md-12 newVehiclebox">
+    <div class="row">
+        <div class="col-md-3 text-center" id="ImageDiv">
+            <label id="year" style="padding-right:2%">@Model.Year</label><label id="make" style="padding-right:2%">@Model.Make</label><label id="model">@Model.Model</label>
+            <img src="~/@Model.Image" style="height:200px; width:200px; padding-top:2%;" />
+        </div>
+
+        <div class="col-md-3" style="text-align:center; padding-top:2%">
+            <div>
+                <span><label style="padding-right:2%">Body Style:</label><label id="bodystyle">@Model.BodyStyle</label></span>
+            </div>
+            <br />
+            <br />
+            <div>
+                <span><label style="padding-right:2%">Trans:</label><label id="trans">@Model.Trans</label></span>
+            </div>
+            <br />
+            <br />
+            <div>
+                <span><label style="padding-right:2%">Color:</label><label id="color">@Model.Interior</label></span>
+            </div>
+        </div>
+        <div class="col-md-3" style="text-align:center; padding-top:2%">
+            <div>
+                <span><label style="padding-right:2%">Interior:</label><label id="interior">@Model.Interior</label></span>
+            </div>
+            <br />
+            <br />
+            <div>
+                <span>
+                    <label style="padding-right:2%">Mileage:</label>
+                    @if (Model.IsNew == true)
+                    { <label id="mileage">New</label> }
+                    else
+                    { <label id="mileage">Used</label> }
+                </span>
+            </div>
+            <br />
+            <br />
+            <div>
+                <span><label style="padding-right:2%">VIN #:</label><label id="vin#">@Model.VinNumber</label></span>
+            </div>
+        </div>
+        <div class="col-md-3" style="text-align:center; padding-top:2%">
+            <div>
+                <span><label>Sale Price:</label><label id="SalePrice">$@Model.SalePrice</label></span>
+            </div>
+            <br />
+            <div>
+                <span><label>MSRP:</label><label id="msrp">$@Model.MSRP</label></span>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-9 col-md-offset-3">
+            <h4>Description</h4>
+            <p class="pull-left" id="description">@Model.Description</p>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,16 @@
+﻿﻿@model CarDealership.Models.UserVM
+@{
+    ViewBag.Title = "EditUser";
+}
+<h2>EditUser</h2>
+@Html.ActionLink("Admin Panel", "Index", "Admin")<br />
+@Html.ValidationSummary()
+@using (Html.BeginForm("EditUser", "Admin", FormMethod.Post))
+{
+    @Html.HiddenFor(m => m.User.Id)
+    <label>UserName : </label>@Html.TextBoxFor(m => m.User.UserName)<br />
+    <label>Role : </label>@Html.DropDownListFor(m => m.AppRoleId, Model.Roles)<br />
+    <label>NewPass : </label>@Html.PasswordFor(m => m.NewPassword)<br />
+    <label>ConfirmPass : </label>@Html.PasswordFor(m => m.ConfirmPass)<br />
+    <button>Submit</button>
+}

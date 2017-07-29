@@ -1,0 +1,49 @@
+﻿@model List<CarDealership.Models.Vehicle>
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<link href="~/Content/index.css" rel="stylesheet" />
+
+
+<div class="container">
+    <div class="jumbotron" id="SpecialOfferJumbotron" style="height:300px">
+        <div id="SpecialOfferCarousel" class="carousel slide" data-ride="carousel" style="height:100%;">
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" id="carouselSlides" role="listbox">
+                <div class="item active">
+                    <h1 style="text-align:center">GuildCars Featured Specials!</h1>
+                    <p class="lead" style="text-align:center">Check out our current special offers, only available for a limited time!</p>
+                </div>
+
+                <div class="item" style="text-align:center;">
+                        <p>TEST OFFER 1 HERE, GENERATE ME DYNAMICALLY FROM THE DATABASE</p>
+                    </div>
+
+            </div>
+
+            <!-- Left and right controls -->
+            <a class="left carousel-control" href="#SpecialOfferCarousel" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#SpecialOfferCarousel" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+
+    <h2 style="text-align:center">Featured Vehicles</h2>
+    <hr />
+
+    <div class="row">
+        <div id="featured-tiles">
+            @foreach (var vehicle in Model)
+            {
+                Html.RenderPartial("_HomeIndexFeaturedVehicleTile", vehicle);
+            }
+        </div>
+    </div>
+</div>

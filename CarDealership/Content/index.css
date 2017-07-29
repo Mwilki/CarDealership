@@ -1,0 +1,45 @@
+﻿.tile {
+    padding: 1%;
+    text-align: center;
+    background-color: black;
+}
+
+body {
+    background-image: url(https://s-media-cache-ak0.pinimg.com/564x/a2/89/a0/a289a04c7d17d67dbf5c5ad61403d4a4.jpg);
+}
+
+#SpecialOfferJumbotron {
+    background-color: black;
+    color: white;
+}
+
+.newVehiclebox {
+    border: 2px solid;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 100%;
+    padding-bottom: 2%;
+    margin-bottom: 1%;
+}
+
+.label {
+    display: inline-block;
+}
+
+.specialBox {
+    border: 2px solid;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 100%;
+    padding-bottom: 2%;
+    margin-bottom: 1%;
+}
+
+.box {
+    border: 2px solid;
+    border-radius: 8px;
+    width: 100%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    margin-bottom:2%
+}

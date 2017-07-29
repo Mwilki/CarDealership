@@ -1,0 +1,12 @@
+﻿@model IEnumerable<CarDealership.Models.Vehicle>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Sales</h2>
+<br />
+@{ 
+    Html.RenderPartial("_SalesSearchBox");
+}
+<br />

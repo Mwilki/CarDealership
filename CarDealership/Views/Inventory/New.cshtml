@@ -1,0 +1,18 @@
+﻿@model List<CarDealership.Models.Vehicle>
+@{
+    ViewBag.Title = "New";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>New Inventory</h1>
+
+<div class="container">
+    <!--Error messages-->
+    <div id="errorMessages"></div>
+    @{ 
+        Html.RenderPartial("_NewSearchBox");
+    }
+</div>
+
+
+

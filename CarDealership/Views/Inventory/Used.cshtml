@@ -1,0 +1,19 @@
+﻿@model CarDealership.Models.Vehicle
+@{
+    ViewBag.Title = "Used";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Used Inventory</h1>
+
+<div class="container">
+    <!--Error messages-->
+    <div id="errorMessages"></div>
+    <div id="searchBoxArea">
+        @{
+            Html.RenderPartial("_UsedSearchBox");
+        }
+    </div>
+</div>
+
+

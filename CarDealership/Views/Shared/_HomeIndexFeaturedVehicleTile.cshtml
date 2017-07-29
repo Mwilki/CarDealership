@@ -1,0 +1,12 @@
+﻿@model CarDealership.Models.Vehicle
+
+<div class="panel panel-default tile col-md-3">
+    <div class="panel-heading">
+        <h3 class="panel-title">@Model.Year @Model.Make @Model.Model</h3>
+    </div>
+    <div class="panel-body" style="color:white; text-align:center;">
+        <img src="~/@Model.Image" style="height:200px; width:200px;" />
+        <br />
+        $@Model.SalePrice
+    </div>
+</div>

@@ -1,0 +1,14 @@
+﻿﻿@model CarDealership.Models.UserVM
+
+@{
+    ViewBag.Title = "AddUser";
+}
+<h2>AddUser</h2>
+@Html.ValidationSummary()
+@using (Html.BeginForm("AddUser", "Admin", FormMethod.Post))
+{
+    <label>UserName : </label>@Html.TextBoxFor(m => m.User.UserName)<br />
+    <label>Password : </label>@Html.PasswordFor(m => m.NewPassword) <br />
+    <label>Role : </label> @Html.DropDownListFor(m => m.AppRoleId, Model.Roles)
+    <button>Submit</button>
+}
